@@ -7,33 +7,33 @@ Entstanden als Übungsprojekt während der Informatikmittelschule, um zu versteh
 ## Verwendung
 
 ```
-TextRecognition <bildpfad> [sprache]
+TextRecognition <bildpfad> [tessdata-ordner] [sprache]
 ```
 
-Beispiel:
+Aus dem Wurzelverzeichnis des Repositorys genügt:
 
 ```
-TextRecognition images/Auto3.png deu
+TextRecognition Auto3.png
 ```
 
 Ausgabe:
 
 ```
 GR·999999
-Zuverlässigkeit: 87.4 %
+Zuverlaessigkeit: 87.4 %
 ```
 
-Ohne Sprachangabe wird `deu` verwendet.
+Ohne Angaben werden `Auto3.png`, der Ordner `testDataPath` und die Sprache `deu` verwendet.
 
 ## Voraussetzungen
 
 - .NET SDK
 - NuGet-Paket `Tesseract`
-- Im Ordner `tessdata` die passende Sprachdatei, zum Beispiel `deu.traineddata`
+- Die passende Sprachdatei im tessdata-Ordner, hier `deu.traineddata` in `testDataPath`
 
 ## Testbilder
 
-Die Bilder zeigen Schweizer Kontrollschilder mit der Musternummer 999999 sowie einen Flyer der Informatikmittelschule. Sie enthalten keine echten Halterdaten.
+Im Repository liegen Aufnahmen von Schweizer Kontrollschildern mit der Musternummer 999999 sowie ein Flyer der Informatikmittelschule. Sie enthalten keine echten Halterdaten.
 
 ## Was ich dabei gelernt habe
 
